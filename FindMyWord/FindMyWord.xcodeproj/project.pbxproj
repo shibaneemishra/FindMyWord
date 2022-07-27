@@ -16,6 +16,14 @@
 		BEC87B5A28917FF100F71C5D /* FindMyWordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC87B5928917FF100F71C5D /* FindMyWordTests.swift */; };
 		BEC87B6428917FF100F71C5D /* FindMyWordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC87B6328917FF100F71C5D /* FindMyWordUITests.swift */; };
 		BEC87B6628917FF100F71C5D /* FindMyWordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC87B6528917FF100F71C5D /* FindMyWordUITestsLaunchTests.swift */; };
+		BEC87B782891895B00F71C5D /* WordGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC87B762891895B00F71C5D /* WordGameController.swift */; };
+		BEC87B792891895B00F71C5D /* WordGameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC87B772891895B00F71C5D /* WordGameController.xib */; };
+		BEC87B7C289189BB00F71C5D /* WordGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC87B7B289189BB00F71C5D /* WordGameViewModel.swift */; };
+		BEC87B7F289189DA00F71C5D /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC87B7E289189DA00F71C5D /* WordModel.swift */; };
+		BEC87B822891A59400F71C5D /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = BEC87B812891A59400F71C5D /* words.json */; };
+		BEC87B842891A68400F71C5D /* DisplayWordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC87B832891A68400F71C5D /* DisplayWordModel.swift */; };
+		BEC87B8A2891B15600F71C5D /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC87B882891B15600F71C5D /* ResultController.swift */; };
+		BEC87B8B2891B15600F71C5D /* ResultController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC87B892891B15600F71C5D /* ResultController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		BEC87B5F28917FF100F71C5D /* FindMyWordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMyWordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC87B6328917FF100F71C5D /* FindMyWordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMyWordUITests.swift; sourceTree = "<group>"; };
 		BEC87B6528917FF100F71C5D /* FindMyWordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMyWordUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BEC87B762891895B00F71C5D /* WordGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameController.swift; sourceTree = "<group>"; };
+		BEC87B772891895B00F71C5D /* WordGameController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordGameController.xib; sourceTree = "<group>"; };
+		BEC87B7B289189BB00F71C5D /* WordGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameViewModel.swift; sourceTree = "<group>"; };
+		BEC87B7E289189DA00F71C5D /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
+		BEC87B812891A59400F71C5D /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		BEC87B832891A68400F71C5D /* DisplayWordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayWordModel.swift; sourceTree = "<group>"; };
+		BEC87B882891B15600F71C5D /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
+		BEC87B892891B15600F71C5D /* ResultController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,9 @@
 		BEC87B4128917FEE00F71C5D /* FindMyWord */ = {
 			isa = PBXGroup;
 			children = (
+				BEC87B802891A57800F71C5D /* Utiliy */,
+				BEC87B73289188C600F71C5D /* Services */,
+				BEC87B72289188BF00F71C5D /* Module */,
 				BEC87B4228917FEE00F71C5D /* AppDelegate.swift */,
 				BEC87B4428917FEE00F71C5D /* SceneDelegate.swift */,
 				BEC87B4628917FEE00F71C5D /* ViewController.swift */,
@@ -125,6 +144,83 @@
 				BEC87B6528917FF100F71C5D /* FindMyWordUITestsLaunchTests.swift */,
 			);
 			path = FindMyWordUITests;
+			sourceTree = "<group>";
+		};
+		BEC87B72289188BF00F71C5D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				BEC87B862891B12100F71C5D /* Result */,
+				BEC87B74289188DC00F71C5D /* WordGame */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		BEC87B73289188C600F71C5D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BEC87B74289188DC00F71C5D /* WordGame */ = {
+			isa = PBXGroup;
+			children = (
+				BEC87B7D289189C000F71C5D /* Model */,
+				BEC87B7A2891899000F71C5D /* ViewModel */,
+				BEC87B752891893000F71C5D /* View */,
+			);
+			path = WordGame;
+			sourceTree = "<group>";
+		};
+		BEC87B752891893000F71C5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BEC87B762891895B00F71C5D /* WordGameController.swift */,
+				BEC87B772891895B00F71C5D /* WordGameController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BEC87B7A2891899000F71C5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BEC87B7B289189BB00F71C5D /* WordGameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BEC87B7D289189C000F71C5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEC87B7E289189DA00F71C5D /* WordModel.swift */,
+				BEC87B832891A68400F71C5D /* DisplayWordModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BEC87B802891A57800F71C5D /* Utiliy */ = {
+			isa = PBXGroup;
+			children = (
+				BEC87B812891A59400F71C5D /* words.json */,
+			);
+			path = Utiliy;
+			sourceTree = "<group>";
+		};
+		BEC87B862891B12100F71C5D /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				BEC87B872891B12C00F71C5D /* View */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		BEC87B872891B12C00F71C5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BEC87B882891B15600F71C5D /* ResultController.swift */,
+				BEC87B892891B15600F71C5D /* ResultController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +328,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC87B4F28917FF000F71C5D /* LaunchScreen.storyboard in Resources */,
+				BEC87B792891895B00F71C5D /* WordGameController.xib in Resources */,
+				BEC87B8B2891B15600F71C5D /* ResultController.xib in Resources */,
 				BEC87B4C28917FF000F71C5D /* Assets.xcassets in Resources */,
 				BEC87B4A28917FEE00F71C5D /* Main.storyboard in Resources */,
+				BEC87B822891A59400F71C5D /* words.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +358,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC87B4728917FEE00F71C5D /* ViewController.swift in Sources */,
+				BEC87B7F289189DA00F71C5D /* WordModel.swift in Sources */,
+				BEC87B7C289189BB00F71C5D /* WordGameViewModel.swift in Sources */,
+				BEC87B782891895B00F71C5D /* WordGameController.swift in Sources */,
+				BEC87B8A2891B15600F71C5D /* ResultController.swift in Sources */,
 				BEC87B4328917FEE00F71C5D /* AppDelegate.swift in Sources */,
 				BEC87B4528917FEE00F71C5D /* SceneDelegate.swift in Sources */,
+				BEC87B842891A68400F71C5D /* DisplayWordModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
