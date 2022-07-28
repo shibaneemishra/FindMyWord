@@ -8,12 +8,13 @@
 import UIKit
 
 struct WordModel: Decodable, Equatable {
-    let eng: String
-    let spa: String
+    let english: String
+    let spanish: String
 
     // MARK: Decodable
     private enum CodingKeys: String, CodingKey {
-        case eng = "text_eng"
-        case spa = "text_spa"
+        case english = "text_eng"
+        case spanish = "text_spa"
     }
 }
+

@@ -8,7 +8,7 @@
 import UIKit
 
 struct DisplayWordModel: Equatable {
-        let questionWord: String
-        let answerWord: String
-        let isTranslationCorrect: Bool
+        let question: String
+        let answer: String
+        let isCorrect: Bool
 }

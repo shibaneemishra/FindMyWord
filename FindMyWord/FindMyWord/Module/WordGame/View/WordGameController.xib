@@ -14,6 +14,7 @@
                 <outlet property="lblSpanish" destination="Hk0-Se-FcG" id="aXh-5T-kng"/>
                 <outlet property="view" destination="moX-xx-m5l" id="hvd-CL-sft"/>
                 <outlet property="viewAnswer" destination="FMK-6S-dgD" id="Npa-Dg-YCa"/>
+                <outlet property="viewQuestion" destination="seR-Ib-QFQ" id="9Tl-wn-GFc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -65,7 +66,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMK-6S-dgD">
-                            <rect key="frame" x="30" y="171" width="354" height="50"/>
+                            <rect key="frame" x="30" y="628" width="354" height="50"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spanish:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNE-Pw-h9f">
                                     <rect key="frame" x="0.0" y="0.0" width="70" height="21"/>
@@ -97,10 +98,10 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="FMK-6S-dgD" secondAttribute="bottom" constant="20" id="0II-S8-4l2"/>
                         <constraint firstItem="ClX-S8-QOU" firstAttribute="leading" secondItem="x5K-ND-PPP" secondAttribute="leading" constant="20" id="Irg-4W-g2t"/>
                         <constraint firstItem="ClX-S8-QOU" firstAttribute="top" secondItem="x5K-ND-PPP" secondAttribute="top" constant="20" id="N87-E0-Qfg"/>
                         <constraint firstItem="seR-Ib-QFQ" firstAttribute="top" secondItem="ClX-S8-QOU" secondAttribute="bottom" constant="50" id="NPl-mU-yuw"/>
-                        <constraint firstItem="FMK-6S-dgD" firstAttribute="top" secondItem="seR-Ib-QFQ" secondAttribute="bottom" constant="10" id="cLr-yN-g18"/>
                         <constraint firstAttribute="trailing" secondItem="ClX-S8-QOU" secondAttribute="trailing" constant="20" id="cZP-HP-I4o"/>
                         <constraint firstItem="seR-Ib-QFQ" firstAttribute="leading" secondItem="x5K-ND-PPP" secondAttribute="leading" constant="30" id="cwt-6x-WXe"/>
                         <constraint firstItem="FMK-6S-dgD" firstAttribute="leading" secondItem="x5K-ND-PPP" secondAttribute="leading" constant="30" id="qM2-vB-rWz"/>

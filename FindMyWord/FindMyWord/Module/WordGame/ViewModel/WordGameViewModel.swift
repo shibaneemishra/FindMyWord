@@ -15,7 +15,9 @@ class WordGameViewModel {
     var questionSerialNumber:Int = 0
     var fetchWordsList:[WordModel] = []
     var displayWordsList:[DisplayWordModel] = []
-    let displayQuestionsCount = 20
+    let displayQuestionsCount = 15
+    var finshedGame: (() -> Void)?
+
 
     
     func getDataFromJsonFile(){
@@ -40,17 +42,17 @@ class WordGameViewModel {
         let shuffled = fetchWordsList.shuffled().prefix(self.displayQuestionsCount)
         let quarter = self.displayQuestionsCount/4 // 25% provalbility
         let CorrectPair = shuffled.prefix(quarter).map {
-            return DisplayWordModel(questionWord: $0.eng,
-                             answerWord: $0.spa,
-                             isTranslationCorrect: true)
+            return DisplayWordModel(question: $0.english,
+                                    answer: $0.spanish,
+                                    isCorrect: true)
         }
         
         let IncorrectPair: [DisplayWordModel] = shuffled.suffix(self.displayQuestionsCount-quarter).map {
-            let allPossibleTranslations = Set(fetchWordsList.map { $0.spa })
-            let answerWord = allPossibleTranslations.randomElement() ?? $0.spa
-            return DisplayWordModel(questionWord: $0.eng,
-                             answerWord: answerWord,
-                             isTranslationCorrect: answerWord == $0.spa)
+            let allPossibleTranslations = Set(fetchWordsList.map { $0.spanish })
+            let answerWord = allPossibleTranslations.randomElement() ?? $0.spanish
+            return DisplayWordModel(question: $0.english,
+                                    answer: answerWord,
+                                    isCorrect: answerWord == $0.spanish)
             
         }
         displayWordsList = (CorrectPair + IncorrectPair).shuffled()
@@ -60,20 +62,27 @@ class WordGameViewModel {
         
         switch answer {
         case .correct:
-            if displayWordsList[questionSerialNumber].isTranslationCorrect == true {
+            if displayWordsList[questionSerialNumber].isCorrect == true {
                 correctAttempts += 1
             }
             else
              { InCorrectAttempts += 1 }
         case .wrong:
-            if displayWordsList[questionSerialNumber].isTranslationCorrect == true {
+            if displayWordsList[questionSerialNumber].isCorrect == true {
                 InCorrectAttempts += 1
             }
             else
              { correctAttempts += 1 }
         }
-        
         self.questionSerialNumber += 1
+        
+//        if InCorrectAttempts >= 3 {
+//           finshedGame?()
+//        }
+//        if  (questionSerialNumber) == (displayWordsList.count) {
+//            finshedGame?()
+//        }
+
     }
     
 }
